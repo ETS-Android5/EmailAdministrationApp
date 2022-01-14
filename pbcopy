@@ -1,0 +1,596 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] openapi-generator-project                                          [pom]
+[INFO] openapi-generator-core                                             [jar]
+[INFO] openapi-generator (core library)                                   [jar]
+[INFO] openapi-generator (executable)                                     [jar]
+[INFO] openapi-generator (maven-plugin)                          [maven-plugin]
+[INFO] openapi-generator-gradle-plugin (maven wrapper)                    [pom]
+[INFO] openapi-generator-online                                           [jar]
+[INFO] 
+[INFO] -------------< org.openapitools:openapi-generator-project >-------------
+[INFO] Building openapi-generator-project 5.3.1-SNAPSHOT                  [1/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator-project ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] org.openapitools:openapi-generator-project:pom:5.3.1-SNAPSHOT
+[INFO] 
+[INFO] --------------< org.openapitools:openapi-generator-core >---------------
+[INFO] Building openapi-generator-core 5.3.1-SNAPSHOT                     [2/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator-core ---
+[INFO] org.openapitools:openapi-generator-core:jar:5.3.1-SNAPSHOT
+[INFO] +- com.google.guava:guava:jar:30.1.1-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:3.8.0:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1:compile
+[INFO] |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO] \- org.testng:testng:jar:7.3.0:test
+[INFO]    +- com.beust:jcommander:jar:1.78:test
+[INFO]    +- org.apache.ant:ant:jar:1.10.3:test
+[INFO]    |  \- org.apache.ant:ant-launcher:jar:1.10.3:test
+[INFO]    +- junit:junit:jar:4.13.2:test
+[INFO]    |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO]    +- com.google.inject:guice:jar:no_aop:4.2.2:test
+[INFO]    |  +- javax.inject:javax.inject:jar:1:test
+[INFO]    |  \- aopalliance:aopalliance:jar:1.0:test
+[INFO]    \- org.yaml:snakeyaml:jar:1.21:test
+[INFO] 
+[INFO] -----------------< org.openapitools:openapi-generator >-----------------
+[INFO] Building openapi-generator (core library) 5.3.1-SNAPSHOT           [3/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator ---
+[INFO] org.openapitools:openapi-generator:jar:5.3.1-SNAPSHOT
+[INFO] +- io.swagger.core.v3:swagger-core:jar:2.1.2:compile
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.1:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.10.1:compile
+[INFO] |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.10.1:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.10.1:compile
+[INFO] |  +- io.swagger.core.v3:swagger-annotations:jar:2.1.2:compile
+[INFO] |  +- io.swagger.core.v3:swagger-models:jar:2.1.2:compile
+[INFO] |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] +- io.swagger.parser.v3:swagger-parser:jar:2.0.26:compile
+[INFO] |  +- io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.0.26:compile
+[INFO] |  |  +- io.swagger:swagger-core:jar:1.6.2:compile
+[INFO] |  |  |  +- io.swagger:swagger-models:jar:1.6.2:compile
+[INFO] |  |  |  |  \- io.swagger:swagger-annotations:jar:1.6.2:compile
+[INFO] |  |  |  \- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- io.swagger:swagger-parser:jar:1.0.55:compile
+[INFO] |  |  +- io.swagger:swagger-compat-spec-parser:jar:1.0.55:compile
+[INFO] |  |  |  +- com.github.java-json-tools:json-schema-validator:jar:2.2.14:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:jackson-coreutils-equivalence:jar:1.0:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-schema-core:jar:1.2.14:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:uri-template:jar:0.10:compile
+[INFO] |  |  |  |  |  \- org.mozilla:rhino:jar:1.7.7.2:compile
+[INFO] |  |  |  |  +- com.sun.mail:mailapi:jar:1.6.2:compile
+[INFO] |  |  |  |  +- com.googlecode.libphonenumber:libphonenumber:jar:8.11.1:compile
+[INFO] |  |  |  |  \- net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile
+[INFO] |  |  |  +- com.github.java-json-tools:json-patch:jar:1.13:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:msg-simple:jar:1.2:compile
+[INFO] |  |  |  |  |  \- com.github.java-json-tools:btf:jar:1.3:compile
+[INFO] |  |  |  |  \- com.github.java-json-tools:jackson-coreutils:jar:2.0:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  |     +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  |     +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  |  |     \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] |  |  \- io.swagger.parser.v3:swagger-parser-core:jar:2.0.26:compile
+[INFO] |  \- io.swagger.parser.v3:swagger-parser-v3:jar:2.0.26:compile
+[INFO] +- com.samskivert:jmustache:jar:1.14:compile
+[INFO] +- com.github.jknack:handlebars:jar:4.2.1:compile
+[INFO] +- com.github.jknack:handlebars-jackson2:jar:4.2.1:compile
+[INFO] +- commons-io:commons-io:jar:2.11.0:compile
+[INFO] +- org.slf4j:slf4j-ext:jar:1.7.32:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.7.32:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+[INFO] +- commons-cli:commons-cli:jar:1.4:compile
+[INFO] +- com.google.guava:guava:jar:30.1.1-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:3.8.0:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1:compile
+[INFO] |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] +- com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.10.2:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-core:jar:2.10.2:compile
+[INFO] +- com.tngtech.archunit:archunit:jar:0.20.1:test
+[INFO] +- com.tngtech.archunit:archunit-junit4:jar:0.20.1:test
+[INFO] |  \- junit:junit:jar:4.13.2:test
+[INFO] |     \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.testng:testng:jar:7.3.0:test
+[INFO] |  +- com.beust:jcommander:jar:1.78:test
+[INFO] |  +- org.apache.ant:ant:jar:1.10.3:test
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.10.3:test
+[INFO] |  +- com.google.inject:guice:jar:no_aop:4.2.2:test
+[INFO] |  |  +- javax.inject:javax.inject:jar:1:test
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:test
+[INFO] |  \- org.yaml:snakeyaml:jar:1.21:compile
+[INFO] +- com.github.javaparser:javaparser-core:jar:3.14.11:test
+[INFO] +- org.reflections:reflections:jar:0.10:test
+[INFO] |  \- org.javassist:javassist:jar:3.28.0-GA:test
+[INFO] +- com.googlecode.java-diff-utils:diffutils:jar:1.3.0:test
+[INFO] +- com.atlassian.commonmark:commonmark:jar:0.11.0:compile
+[INFO] +- org.mockito:mockito-core:jar:3.12.4:test
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.11.13:test
+[INFO] |  +- net.bytebuddy:byte-buddy-agent:jar:1.11.13:test
+[INFO] |  \- org.objenesis:objenesis:jar:3.2:test
+[INFO] +- com.github.mifmif:generex:jar:1.0.2:compile
+[INFO] |  \- dk.brics.automaton:automaton:jar:1.11-8:compile
+[INFO] +- com.github.curious-odd-man:rgxgen:jar:1.3:compile
+[INFO] +- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.2:compile
+[INFO] |  \- joda-time:joda-time:jar:2.9.9:compile
+[INFO] +- com.github.joschi.jackson:jackson-datatype-threetenbp:jar:2.10.0:compile
+[INFO] |  \- org.threeten:threetenbp:jar:1.4.0:compile
+[INFO] +- org.openapitools:openapi-generator-core:jar:5.3.1-SNAPSHOT:compile
+[INFO] +- org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.3.60:test
+[INFO] |  +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.60:test
+[INFO] |  |  +- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.60:test
+[INFO] |  |  \- org.jetbrains:annotations:jar:13.0:test
+[INFO] |  \- org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.3.60:test
+[INFO] +- org.jetbrains.kotlin:kotlin-compiler-embeddable:jar:1.3.60:test
+[INFO] |  +- org.jetbrains.kotlin:kotlin-script-runtime:jar:1.3.60:test
+[INFO] |  +- org.jetbrains.kotlin:kotlin-reflect:jar:1.3.60:test
+[INFO] |  +- org.jetbrains.kotlin:kotlin-daemon-embeddable:jar:1.3.60:test
+[INFO] |  \- org.jetbrains.intellij.deps:trove4j:jar:1.0.20181211:test
+[INFO] +- org.jetbrains.kotlin:kotlin-script-util:jar:1.3.60:test
+[INFO] |  +- org.jetbrains.kotlin:kotlin-scripting-jvm:jar:1.3.60:test
+[INFO] |  |  \- org.jetbrains.kotlin:kotlin-scripting-common:jar:1.3.60:test
+[INFO] |  \- org.jetbrains.kotlin:kotlin-daemon-client:jar:1.3.60:test
+[INFO] |     \- org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.2.1:test
+[INFO] +- com.google.guava:guava-testlib:jar:28.2-jre:test
+[INFO] +- net.java.dev.jna:jna:jar:5.5.0:compile
+[INFO] +- com.github.ben-manes.caffeine:caffeine:jar:2.8.1:compile
+[INFO] \- org.assertj:assertj-core:jar:3.19.0:test
+[INFO] 
+[INFO] ---------------< org.openapitools:openapi-generator-cli >---------------
+[INFO] Building openapi-generator (executable) 5.3.1-SNAPSHOT             [4/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator-cli ---
+[INFO] org.openapitools:openapi-generator-cli:jar:5.3.1-SNAPSHOT
+[INFO] +- org.openapitools:openapi-generator:jar:5.3.1-SNAPSHOT:compile
+[INFO] |  +- io.swagger.core.v3:swagger-core:jar:2.1.2:compile
+[INFO] |  |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile
+[INFO] |  |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.10.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.10.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.10.1:compile
+[INFO] |  |  +- io.swagger.core.v3:swagger-annotations:jar:2.1.2:compile
+[INFO] |  |  +- io.swagger.core.v3:swagger-models:jar:2.1.2:compile
+[INFO] |  |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] |  +- io.swagger.parser.v3:swagger-parser:jar:2.0.26:compile
+[INFO] |  |  +- io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.0.26:compile
+[INFO] |  |  |  +- io.swagger:swagger-core:jar:1.6.2:compile
+[INFO] |  |  |  |  +- io.swagger:swagger-models:jar:1.6.2:compile
+[INFO] |  |  |  |  |  \- io.swagger:swagger-annotations:jar:1.6.2:compile
+[INFO] |  |  |  |  \- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  |  +- io.swagger:swagger-parser:jar:1.0.55:compile
+[INFO] |  |  |  +- io.swagger:swagger-compat-spec-parser:jar:1.0.55:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-schema-validator:jar:2.2.14:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:jackson-coreutils-equivalence:jar:1.0:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:json-schema-core:jar:1.2.14:compile
+[INFO] |  |  |  |  |  |  +- com.github.java-json-tools:uri-template:jar:0.10:compile
+[INFO] |  |  |  |  |  |  \- org.mozilla:rhino:jar:1.7.7.2:compile
+[INFO] |  |  |  |  |  +- com.sun.mail:mailapi:jar:1.6.2:compile
+[INFO] |  |  |  |  |  +- com.googlecode.libphonenumber:libphonenumber:jar:8.11.1:compile
+[INFO] |  |  |  |  |  \- net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-patch:jar:1.13:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:msg-simple:jar:1.2:compile
+[INFO] |  |  |  |  |  |  \- com.github.java-json-tools:btf:jar:1.3:compile
+[INFO] |  |  |  |  |  \- com.github.java-json-tools:jackson-coreutils:jar:2.0:compile
+[INFO] |  |  |  |  \- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  |  |     +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  |  |     +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  |  |  |     \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] |  |  |  \- io.swagger.parser.v3:swagger-parser-core:jar:2.0.26:compile
+[INFO] |  |  \- io.swagger.parser.v3:swagger-parser-v3:jar:2.0.26:compile
+[INFO] |  +- com.samskivert:jmustache:jar:1.14:compile
+[INFO] |  +- com.github.jknack:handlebars:jar:4.2.1:compile
+[INFO] |  +- com.github.jknack:handlebars-jackson2:jar:4.2.1:compile
+[INFO] |  +- commons-io:commons-io:jar:2.11.0:compile
+[INFO] |  +- org.slf4j:slf4j-ext:jar:1.7.32:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.4:compile
+[INFO] |  +- com.google.guava:guava:jar:30.1.1-jre:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- org.checkerframework:checker-qual:jar:3.8.0:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.10.2:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.10.2:compile
+[INFO] |  +- com.atlassian.commonmark:commonmark:jar:0.11.0:compile
+[INFO] |  +- com.github.mifmif:generex:jar:1.0.2:compile
+[INFO] |  |  \- dk.brics.automaton:automaton:jar:1.11-8:compile
+[INFO] |  +- com.github.curious-odd-man:rgxgen:jar:1.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:2.9.9:compile
+[INFO] |  +- com.github.joschi.jackson:jackson-datatype-threetenbp:jar:2.10.0:compile
+[INFO] |  |  \- org.threeten:threetenbp:jar:1.4.0:compile
+[INFO] |  +- org.openapitools:openapi-generator-core:jar:5.3.1-SNAPSHOT:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:5.5.0:compile
+[INFO] |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.1:compile
+[INFO] +- io.airlift:airline:jar:0.8:compile
+[INFO] |  +- javax.inject:javax.inject:jar:1:compile
+[INFO] |  \- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] +- com.googlecode.lambdaj:lambdaj:jar:2.3.3:compile
+[INFO] |  +- org.hamcrest:hamcrest-all:jar:1.1:compile
+[INFO] |  +- org.objenesis:objenesis:jar:1.2:compile
+[INFO] |  \- cglib:cglib-nodep:jar:2.2:compile
+[INFO] +- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO] |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO] +- org.codehaus.janino:janino:jar:3.1.0:compile
+[INFO] |  \- org.codehaus.janino:commons-compiler:jar:3.1.0:compile
+[INFO] +- org.testng:testng:jar:7.3.0:test
+[INFO] |  +- com.beust:jcommander:jar:1.78:test
+[INFO] |  +- org.apache.ant:ant:jar:1.10.3:test
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.10.3:test
+[INFO] |  +- junit:junit:jar:4.13.2:test
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- com.google.inject:guice:jar:no_aop:4.2.2:test
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:test
+[INFO] |  \- org.yaml:snakeyaml:jar:1.21:compile
+[INFO] \- org.mockito:mockito-core:jar:3.12.4:test
+[INFO]    +- net.bytebuddy:byte-buddy:jar:1.11.13:test
+[INFO]    \- net.bytebuddy:byte-buddy-agent:jar:1.11.13:test
+[INFO] 
+[INFO] ----------< org.openapitools:openapi-generator-maven-plugin >-----------
+[INFO] Building openapi-generator (maven-plugin) 5.3.1-SNAPSHOT           [5/7]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator-maven-plugin ---
+[INFO] org.openapitools:openapi-generator-maven-plugin:maven-plugin:5.3.1-SNAPSHOT
+[INFO] +- org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[INFO] +- org.apache.maven:maven-core:jar:3.3.1:compile
+[INFO] |  +- org.apache.maven:maven-model:jar:3.3.1:compile
+[INFO] |  +- org.apache.maven:maven-settings:jar:3.3.1:compile
+[INFO] |  +- org.apache.maven:maven-settings-builder:jar:3.3.1:compile
+[INFO] |  |  \- org.apache.maven:maven-builder-support:jar:3.3.1:compile
+[INFO] |  +- org.apache.maven:maven-repository-metadata:jar:3.3.1:compile
+[INFO] |  +- org.apache.maven:maven-model-builder:jar:3.3.1:compile
+[INFO] |  +- org.apache.maven:maven-aether-provider:jar:3.3.1:compile
+[INFO] |  |  \- org.eclipse.aether:aether-spi:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.aether:aether-impl:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.aether:aether-api:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.aether:aether-util:jar:1.0.2.v20150114:compile
+[INFO] |  +- org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.0:compile
+[INFO] |  |  +- javax.enterprise:cdi-api:jar:1.0:compile
+[INFO] |  |  |  \- javax.annotation:jsr250-api:jar:1.0:compile
+[INFO] |  |  \- org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.0:compile
+[INFO] |  +- org.sonatype.sisu:sisu-guice:jar:no_aop:3.2.5:compile
+[INFO] |  |  +- javax.inject:javax.inject:jar:1:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.codehaus.plexus:plexus-interpolation:jar:1.21:compile
+[INFO] |  +- org.codehaus.plexus:plexus-classworlds:jar:2.5.2:compile
+[INFO] |  +- org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[INFO] |  \- org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[INFO] |     \- org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[INFO] +- org.apache.maven:maven-artifact:jar:3.2.5:provided
+[INFO] +- org.apache.maven:maven-compat:jar:3.5.0:compile
+[INFO] |  +- org.apache.maven:maven-resolver-provider:jar:3.5.0:compile
+[INFO] |  |  \- org.apache.maven.resolver:maven-resolver-spi:jar:1.0.3:compile
+[INFO] |  +- org.apache.maven.resolver:maven-resolver-api:jar:1.0.3:compile
+[INFO] |  +- org.apache.maven.resolver:maven-resolver-util:jar:1.0.3:compile
+[INFO] |  +- org.apache.maven.resolver:maven-resolver-impl:jar:1.0.3:compile
+[INFO] |  \- org.apache.maven.wagon:wagon-provider-api:jar:2.12:compile
+[INFO] +- org.apache.maven:maven-plugin-api:jar:3.3.1:compile
+[INFO] +- org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.4:compile
+[INFO] +- org.openapitools:openapi-generator:jar:5.3.1-SNAPSHOT:compile
+[INFO] |  +- io.swagger.core.v3:swagger-core:jar:2.1.2:compile
+[INFO] |  |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile
+[INFO] |  |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.10.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.10.1:compile
+[INFO] |  |  |  \- org.yaml:snakeyaml:jar:1.24:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.10.1:compile
+[INFO] |  |  +- io.swagger.core.v3:swagger-annotations:jar:2.1.2:compile
+[INFO] |  |  +- io.swagger.core.v3:swagger-models:jar:2.1.2:compile
+[INFO] |  |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] |  +- io.swagger.parser.v3:swagger-parser:jar:2.0.26:compile
+[INFO] |  |  +- io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.0.26:compile
+[INFO] |  |  |  +- io.swagger:swagger-core:jar:1.6.2:compile
+[INFO] |  |  |  |  +- io.swagger:swagger-models:jar:1.6.2:compile
+[INFO] |  |  |  |  |  \- io.swagger:swagger-annotations:jar:1.6.2:compile
+[INFO] |  |  |  |  \- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  |  +- io.swagger:swagger-parser:jar:1.0.55:compile
+[INFO] |  |  |  +- io.swagger:swagger-compat-spec-parser:jar:1.0.55:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-schema-validator:jar:2.2.14:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:jackson-coreutils-equivalence:jar:1.0:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:json-schema-core:jar:1.2.14:compile
+[INFO] |  |  |  |  |  |  +- com.github.java-json-tools:uri-template:jar:0.10:compile
+[INFO] |  |  |  |  |  |  \- org.mozilla:rhino:jar:1.7.7.2:compile
+[INFO] |  |  |  |  |  +- com.sun.mail:mailapi:jar:1.6.2:compile
+[INFO] |  |  |  |  |  +- com.googlecode.libphonenumber:libphonenumber:jar:8.11.1:compile
+[INFO] |  |  |  |  |  \- net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-patch:jar:1.13:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:msg-simple:jar:1.2:compile
+[INFO] |  |  |  |  |  |  \- com.github.java-json-tools:btf:jar:1.3:compile
+[INFO] |  |  |  |  |  \- com.github.java-json-tools:jackson-coreutils:jar:2.0:compile
+[INFO] |  |  |  |  \- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  |  |     +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  |  |     +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  |  |  |     \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] |  |  |  \- io.swagger.parser.v3:swagger-parser-core:jar:2.0.26:compile
+[INFO] |  |  \- io.swagger.parser.v3:swagger-parser-v3:jar:2.0.26:compile
+[INFO] |  +- com.samskivert:jmustache:jar:1.14:compile
+[INFO] |  +- com.github.jknack:handlebars:jar:4.2.1:compile
+[INFO] |  +- com.github.jknack:handlebars-jackson2:jar:4.2.1:compile
+[INFO] |  +- commons-io:commons-io:jar:2.11.0:compile
+[INFO] |  +- org.slf4j:slf4j-ext:jar:1.7.32:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO] |  +- org.slf4j:slf4j-simple:jar:1.7.32:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.4:compile
+[INFO] |  +- com.google.guava:guava:jar:30.1.1-jre:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |  +- org.checkerframework:checker-qual:jar:3.8.0:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.10.2:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.10.2:compile
+[INFO] |  +- com.atlassian.commonmark:commonmark:jar:0.11.0:compile
+[INFO] |  +- com.github.mifmif:generex:jar:1.0.2:compile
+[INFO] |  |  \- dk.brics.automaton:automaton:jar:1.11-8:compile
+[INFO] |  +- com.github.curious-odd-man:rgxgen:jar:1.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:2.9.9:compile
+[INFO] |  +- com.github.joschi.jackson:jackson-datatype-threetenbp:jar:2.10.0:compile
+[INFO] |  |  \- org.threeten:threetenbp:jar:1.4.0:compile
+[INFO] |  +- org.openapitools:openapi-generator-core:jar:5.3.1-SNAPSHOT:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:5.5.0:compile
+[INFO] |  \- com.github.ben-manes.caffeine:caffeine:jar:2.8.1:compile
+[INFO] +- junit:junit:jar:4.13.2:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.apache.maven.shared:maven-verifier:jar:1.7.2:test
+[INFO] |  \- org.apache.maven.shared:maven-shared-utils:jar:3.2.1:test
+[INFO] +- org.apache.maven.plugin-testing:maven-plugin-testing-harness:jar:3.3.0:test
+[INFO] |  \- org.codehaus.plexus:plexus-archiver:jar:2.2:test
+[INFO] |     +- org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:test
+[INFO] |     |  \- classworlds:classworlds:jar:1.1-alpha-2:test
+[INFO] |     \- org.codehaus.plexus:plexus-io:jar:2.0.4:test
+[INFO] \- org.codehaus.plexus:plexus-utils:jar:3.3.0:test
+[INFO] 
+[INFO] ----< org.openapitools:openapi-generator-gradle-plugin-mvn-wrapper >----
+[INFO] Building openapi-generator-gradle-plugin (maven wrapper) 5.3.1-SNAPSHOT [6/7]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator-gradle-plugin-mvn-wrapper ---
+[INFO] org.openapitools:openapi-generator-gradle-plugin-mvn-wrapper:pom:5.3.1-SNAPSHOT
+[INFO] \- org.openapitools:openapi-generator:jar:5.3.1-SNAPSHOT:compile
+[INFO]    +- io.swagger.core.v3:swagger-core:jar:2.1.2:compile
+[INFO]    |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.2:compile
+[INFO]    |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.1:compile
+[INFO]    |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1:compile
+[INFO]    |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.10.1:compile
+[INFO]    |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.10.1:compile
+[INFO]    |  |  \- org.yaml:snakeyaml:jar:1.24:compile
+[INFO]    |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.10.1:compile
+[INFO]    |  +- io.swagger.core.v3:swagger-annotations:jar:2.1.2:compile
+[INFO]    |  +- io.swagger.core.v3:swagger-models:jar:2.1.2:compile
+[INFO]    |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO]    +- io.swagger.parser.v3:swagger-parser:jar:2.0.26:compile
+[INFO]    |  +- io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.0.26:compile
+[INFO]    |  |  +- io.swagger:swagger-core:jar:1.6.2:compile
+[INFO]    |  |  |  +- io.swagger:swagger-models:jar:1.6.2:compile
+[INFO]    |  |  |  |  \- io.swagger:swagger-annotations:jar:1.6.2:compile
+[INFO]    |  |  |  \- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO]    |  |  +- io.swagger:swagger-parser:jar:1.0.55:compile
+[INFO]    |  |  +- io.swagger:swagger-compat-spec-parser:jar:1.0.55:compile
+[INFO]    |  |  |  +- com.github.java-json-tools:json-schema-validator:jar:2.2.14:compile
+[INFO]    |  |  |  |  +- com.github.java-json-tools:jackson-coreutils-equivalence:jar:1.0:compile
+[INFO]    |  |  |  |  +- com.github.java-json-tools:json-schema-core:jar:1.2.14:compile
+[INFO]    |  |  |  |  |  +- com.github.java-json-tools:uri-template:jar:0.10:compile
+[INFO]    |  |  |  |  |  \- org.mozilla:rhino:jar:1.7.7.2:compile
+[INFO]    |  |  |  |  +- com.sun.mail:mailapi:jar:1.6.2:compile
+[INFO]    |  |  |  |  +- com.googlecode.libphonenumber:libphonenumber:jar:8.11.1:compile
+[INFO]    |  |  |  |  \- net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile
+[INFO]    |  |  |  +- com.github.java-json-tools:json-patch:jar:1.13:compile
+[INFO]    |  |  |  |  +- com.github.java-json-tools:msg-simple:jar:1.2:compile
+[INFO]    |  |  |  |  |  \- com.github.java-json-tools:btf:jar:1.3:compile
+[INFO]    |  |  |  |  \- com.github.java-json-tools:jackson-coreutils:jar:2.0:compile
+[INFO]    |  |  |  \- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO]    |  |  |     +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO]    |  |  |     +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    |  |  |     \- commons-codec:commons-codec:jar:1.9:compile
+[INFO]    |  |  \- io.swagger.parser.v3:swagger-parser-core:jar:2.0.26:compile
+[INFO]    |  \- io.swagger.parser.v3:swagger-parser-v3:jar:2.0.26:compile
+[INFO]    +- com.samskivert:jmustache:jar:1.14:compile
+[INFO]    +- com.github.jknack:handlebars:jar:4.2.1:compile
+[INFO]    +- com.github.jknack:handlebars-jackson2:jar:4.2.1:compile
+[INFO]    +- commons-io:commons-io:jar:2.11.0:compile
+[INFO]    +- org.slf4j:slf4j-ext:jar:1.7.32:compile
+[INFO]    +- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO]    +- org.slf4j:slf4j-simple:jar:1.7.32:compile
+[INFO]    +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+[INFO]    +- commons-cli:commons-cli:jar:1.4:compile
+[INFO]    +- com.google.guava:guava:jar:30.1.1-jre:compile
+[INFO]    |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    |  +- org.checkerframework:checker-qual:jar:3.8.0:compile
+[INFO]    |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1:compile
+[INFO]    |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO]    +- com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.10.2:compile
+[INFO]    |  \- com.fasterxml.jackson.core:jackson-core:jar:2.10.2:compile
+[INFO]    +- com.atlassian.commonmark:commonmark:jar:0.11.0:compile
+[INFO]    +- com.github.mifmif:generex:jar:1.0.2:compile
+[INFO]    |  \- dk.brics.automaton:automaton:jar:1.11-8:compile
+[INFO]    +- com.github.curious-odd-man:rgxgen:jar:1.3:compile
+[INFO]    +- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.2:compile
+[INFO]    |  \- joda-time:joda-time:jar:2.9.9:compile
+[INFO]    +- com.github.joschi.jackson:jackson-datatype-threetenbp:jar:2.10.0:compile
+[INFO]    |  \- org.threeten:threetenbp:jar:1.4.0:compile
+[INFO]    +- org.openapitools:openapi-generator-core:jar:5.3.1-SNAPSHOT:compile
+[INFO]    +- net.java.dev.jna:jna:jar:5.5.0:compile
+[INFO]    \- com.github.ben-manes.caffeine:caffeine:jar:2.8.1:compile
+[INFO] 
+[INFO] -------------< org.openapitools:openapi-generator-online >--------------
+[INFO] Building openapi-generator-online 5.3.1-SNAPSHOT                   [7/7]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ openapi-generator-online ---
+[INFO] org.openapitools:openapi-generator-online:jar:5.3.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.5.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.5.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.5.5:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.5.5:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.6:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.6:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.14.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.14.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.32:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.28:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.5.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.12.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.12.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.12.5:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.5.5:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.53:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.53:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.53:compile
+[INFO] |  +- org.springframework:spring-web:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.3.10:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:5.3.10:compile
+[INFO] |     +- org.springframework:spring-aop:jar:5.3.10:compile
+[INFO] |     +- org.springframework:spring-context:jar:5.3.10:compile
+[INFO] |     \- org.springframework:spring-expression:jar:5.3.10:compile
+[INFO] +- io.springfox:springfox-swagger2:jar:3.0.0:compile
+[INFO] |  +- io.springfox:springfox-spi:jar:3.0.0:compile
+[INFO] |  |  \- io.springfox:springfox-core:jar:3.0.0:compile
+[INFO] |  +- io.springfox:springfox-schema:jar:3.0.0:compile
+[INFO] |  +- io.springfox:springfox-swagger-common:jar:3.0.0:compile
+[INFO] |  |  \- io.swagger.core.v3:swagger-annotations:jar:2.1.2:compile
+[INFO] |  +- io.springfox:springfox-spring-web:jar:3.0.0:compile
+[INFO] |  |  \- io.github.classgraph:classgraph:jar:4.8.83:compile
+[INFO] |  +- io.springfox:springfox-spring-webmvc:jar:3.0.0:compile
+[INFO] |  +- io.springfox:springfox-spring-webflux:jar:3.0.0:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.32:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-core:jar:2.0.0.RELEASE:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-metadata:jar:2.0.0.RELEASE:compile
+[INFO] |  \- org.mapstruct:mapstruct:jar:1.3.1.Final:runtime
+[INFO] +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+[INFO] +- org.openapitools:openapi-generator:jar:5.3.1-SNAPSHOT:compile
+[INFO] |  +- io.swagger.core.v3:swagger-core:jar:2.1.2:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.12.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.12.5:compile
+[INFO] |  |  \- io.swagger.core.v3:swagger-models:jar:2.1.2:compile
+[INFO] |  +- io.swagger.parser.v3:swagger-parser:jar:2.0.26:compile
+[INFO] |  |  +- io.swagger.parser.v3:swagger-parser-v2-converter:jar:2.0.26:compile
+[INFO] |  |  |  +- io.swagger:swagger-core:jar:1.6.2:compile
+[INFO] |  |  |  |  +- io.swagger:swagger-models:jar:1.6.2:compile
+[INFO] |  |  |  |  |  \- io.swagger:swagger-annotations:jar:1.6.2:compile
+[INFO] |  |  |  |  \- javax.validation:validation-api:jar:2.0.1.Final:compile
+[INFO] |  |  |  +- io.swagger:swagger-parser:jar:1.0.55:compile
+[INFO] |  |  |  +- io.swagger:swagger-compat-spec-parser:jar:1.0.55:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-schema-validator:jar:2.2.14:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:jackson-coreutils-equivalence:jar:1.0:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:json-schema-core:jar:1.2.14:compile
+[INFO] |  |  |  |  |  |  +- com.github.java-json-tools:uri-template:jar:0.10:compile
+[INFO] |  |  |  |  |  |  \- org.mozilla:rhino:jar:1.7.7.2:compile
+[INFO] |  |  |  |  |  +- com.sun.mail:mailapi:jar:1.6.2:compile
+[INFO] |  |  |  |  |  +- com.googlecode.libphonenumber:libphonenumber:jar:8.11.1:compile
+[INFO] |  |  |  |  |  \- net.sf.jopt-simple:jopt-simple:jar:5.0.4:compile
+[INFO] |  |  |  |  +- com.github.java-json-tools:json-patch:jar:1.13:compile
+[INFO] |  |  |  |  |  +- com.github.java-json-tools:msg-simple:jar:1.2:compile
+[INFO] |  |  |  |  |  |  \- com.github.java-json-tools:btf:jar:1.3:compile
+[INFO] |  |  |  |  |  \- com.github.java-json-tools:jackson-coreutils:jar:2.0:compile
+[INFO] |  |  |  |  \- org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[INFO] |  |  |  |     +- org.apache.httpcomponents:httpcore:jar:4.4.14:compile
+[INFO] |  |  |  |     \- commons-codec:commons-codec:jar:1.15:compile
+[INFO] |  |  |  \- io.swagger.parser.v3:swagger-parser-core:jar:2.0.26:compile
+[INFO] |  |  \- io.swagger.parser.v3:swagger-parser-v3:jar:2.0.26:compile
+[INFO] |  +- com.samskivert:jmustache:jar:1.15:compile
+[INFO] |  +- com.github.jknack:handlebars:jar:4.2.1:compile
+[INFO] |  +- com.github.jknack:handlebars-jackson2:jar:4.2.1:compile
+[INFO] |  +- commons-io:commons-io:jar:2.11.0:compile
+[INFO] |  +- org.slf4j:slf4j-ext:jar:1.7.32:compile
+[INFO] |  +- org.slf4j:slf4j-simple:jar:1.7.32:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.4:compile
+[INFO] |  +- com.google.guava:guava:jar:30.1.1-jre:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |  +- org.checkerframework:checker-qual:jar:3.8.0:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.5.1:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.12.5:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.12.5:compile
+[INFO] |  +- com.atlassian.commonmark:commonmark:jar:0.11.0:compile
+[INFO] |  +- com.github.mifmif:generex:jar:1.0.2:compile
+[INFO] |  |  \- dk.brics.automaton:automaton:jar:1.11-8:compile
+[INFO] |  +- com.github.curious-odd-man:rgxgen:jar:1.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.12.5:compile
+[INFO] |  |  \- joda-time:joda-time:jar:2.10.8:compile
+[INFO] |  +- com.github.joschi.jackson:jackson-datatype-threetenbp:jar:2.10.0:compile
+[INFO] |  |  \- org.threeten:threetenbp:jar:1.4.0:compile
+[INFO] |  +- org.openapitools:openapi-generator-core:jar:5.3.1-SNAPSHOT:compile
+[INFO] |  +- net.java.dev.jna:jna:jar:5.5.0:compile
+[INFO] |  \- com.github.ben-manes.caffeine:caffeine:jar:2.9.2:compile
+[INFO] +- junit:junit:jar:4.13.2:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:2.2:test
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.5.5:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.5.5:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.5.0:test
+[INFO] |  |  \- net.minidev:json-smart:jar:2.4.7:test
+[INFO] |  |     \- net.minidev:accessors-smart:jar:2.4.7:test
+[INFO] |  |        \- org.ow2.asm:asm:jar:9.1:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+[INFO] |  +- org.assertj:assertj-core:jar:3.19.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.7.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.7.2:test
+[INFO] |  |  |  +- org.apiguardian:apiguardian-api:jar:1.1.0:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  |  |  \- org.junit.platform:junit-platform-commons:jar:1.7.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.7.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.7.2:test
+[INFO] |  +- org.mockito:mockito-core:jar:3.9.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.10.22:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.22:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.2:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:3.9.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.3.10:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.10:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.3.10:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.8.2:test
+[INFO] \- org.springframework.boot:spring-boot-test:jar:2.5.5:test
+[INFO]    \- org.springframework.boot:spring-boot:jar:2.5.5:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for openapi-generator-project 5.3.1-SNAPSHOT:
+[INFO] 
+[INFO] openapi-generator-project .......................... SUCCESS [  0.280 s]
+[INFO] openapi-generator-core ............................. SUCCESS [  0.029 s]
+[INFO] openapi-generator (core library) ................... SUCCESS [  0.187 s]
+[INFO] openapi-generator (executable) ..................... SUCCESS [  0.032 s]
+[INFO] openapi-generator (maven-plugin) ................... SUCCESS [  0.104 s]
+[INFO] openapi-generator-gradle-plugin (maven wrapper) .... SUCCESS [  0.105 s]
+[INFO] openapi-generator-online ........................... SUCCESS [  0.089 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.112 s
+[INFO] Finished at: 2021-12-10T16:52:57-05:00
+[INFO] ------------------------------------------------------------------------
